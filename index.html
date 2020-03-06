@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch Example</title>
+</head>
+<body>
+    <button id="getHeroes">Get Heroes</button>
+    <br>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('getHeroes').addEventListener('click', getHeroes);
+
+        function getHeroes(){
+            fetch('heroes.json')
+            .then(function(res){
+                return res.json();
+            })
+            .then(function(data){
+                let output = '';
+                for(let i=0;i<data.superHeroes.length;i++){
+                    output +=`
+                        <ul>
+                            <h3>NAME: ${data.superHeroes[i].heroName}</h3>
+                            <li>FIRST NAME: ${data.superHeroes[i].firstName}</li>
+                            <li>LAST NAME: ${data.superHeroes[i].lastName}</li>
+                            <li>AGE: ${data.superHeroes[i].age}</li>
+                        </ul>
+                    `;
+                }
+                document.getElementById('output').innerHTML = output;
+            })
+        }
+    </script>
+</body>
+</html>

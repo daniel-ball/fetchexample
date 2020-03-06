@@ -1,0 +1,42 @@
+{
+   "superHeroes": 
+   
+    [
+
+        {
+            "firstName":"Peter",
+            "lastName":"Parker",
+            "age":20,
+            "male":true,
+            "powers":[ "spider-sense", "clings to walls", "strength"],
+            "heroName":"Spiderman"
+        },
+
+        {
+            "firstName":"Bobby",
+            "lastName":"Drake",
+            "age":19,
+            "male":true,
+            "powers":["Manipulates ice and water", "Turns to ice"],
+            "heroName":"Iceman"
+        },
+
+        {
+            "firstName":"Tony",
+            "lastName":"Stark",
+            "age":20,
+            "male":true,
+            "powers":["Strength", "Can fly", "Armor suit"],
+            "heroName":"Iron Man"
+        },
+
+        {
+            "firstName":"Clark",
+            "lastName":"Kent",
+            "age":30,
+            "male":true,
+            "powers":["Super Strength", "Can fly", "X-ray vision"],
+            "heroName":"Superman"
+        }
+    ]
+}
